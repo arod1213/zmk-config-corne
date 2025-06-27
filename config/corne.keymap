@@ -37,7 +37,7 @@
             bindings = <
 &kp TAB     &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN  &kp EQUAL       &kp EQUAL     &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp BSPC
 &bt BT_CLR  &kp NUMBER_1          &kp NUMBER_2      &kp NUMBER_3    &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8     &kp NUMBER_9       &kp NUMBER_0           &bt BT_SEL 0
-&kp LSHFT   &kp TILDE             &kp SINGLE_QUOTE  &kp QUESTION    &kp AMPERSAND  &kp MINUS       &kp PLUS      &kp ASTERISK      &kp EXCL         &kp DOUBLE_QUOTES  &kp AT                 &trans
+&kp LSHFT   &kp CARET             &kp SINGLE_QUOTE  &kp QUESTION    &kp AMPERSAND  &kp MINUS       &kp PLUS      &kp ASTERISK      &kp EXCL         &kp DOUBLE_QUOTES  &kp DOLLAR             &trans
                                                     &kp LGUI        &trans         &kp SPACE       &kp RET       &trans            &kp RALT
             >;
         };
