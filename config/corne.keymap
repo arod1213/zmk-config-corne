@@ -22,10 +22,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J          &kp L  &kp U      &kp Y    &kp SEMICOLON  &sl 1
-&kp LCTRL     &kp A  &kp R  &kp S     &kp T  &kp G        &kp K          &kp N  &kp E      &kp I    &kp O          &kp ESCAPE
-&kp LEFT_ALT  &kp X  &kp C  &kp D     &kp V  &kp Z        &kp M          &kp H  &kp COMMA  &kp DOT  &kp FSLH       &sl 2
-                            &kp LGUI  &mo 1  &kp SPACE    &kp BACKSPACE  &mo 2  &kp RSHFT
+&kp TAB       &kp Q  &kp W  &kp F     &kp P  &kp B             &kp J      &kp L  &kp U          &kp Y    &kp SEMICOLON  &kp BACKSPACE
+&kp LCTRL     &kp A  &kp R  &kp S     &kp T  &kp G             &kp K      &kp N  &kp E          &kp I    &kp O          &kp ESCAPE
+&kp LEFT_ALT  &kp X  &kp C  &kp D     &kp V  &kp Z             &kp M      &kp H  &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_CONTROL
+                            &kp LGUI  &sl 1  &kp LEFT_SHIFT    &kp SPACE  &sl 2  &kp BACKSPACE
             >;
         };
 
@@ -40,7 +40,7 @@
 &kp TAB     &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN  &kp EQUAL       &kp EQUAL     &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp BSPC
 &bt BT_CLR  &kp NUMBER_1          &kp NUMBER_2      &kp NUMBER_3    &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8     &kp NUMBER_9       &kp NUMBER_0           &bt BT_SEL 0
 &kp LSHFT   &kp CARET             &kp SINGLE_QUOTE  &kp QUESTION    &kp AMPERSAND  &kp MINUS       &kp PLUS      &kp ASTERISK      &kp EXCL         &kp DOUBLE_QUOTES  &kp DOLLAR             &trans
-                                                    &trans          &trans         &kp ESCAPE      &kp RET       &trans            &trans
+                                                    &trans          &sl 0          &trans          &kp RET       &sl 2             &trans
             >;
         };
 
@@ -52,10 +52,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans             &trans          &trans          &trans        &trans           &trans              &trans     &kp F9          &kp F10         &kp F11       &kp F12          &trans
+&kp F1             &kp F2          &kp F3          &kp F4        &kp F5           &kp F6              &kp F7     &kp F8          &kp F9          &kp F10       &kp F11          &kp F12
 &mmv MOVE_X(-300)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mmv MOVE_X(300)    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
 &trans             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans              &trans     &trans          &trans          &trans        &trans           &trans
-                                                   &trans        &trans           &mkp LCLK           &mkp RCLK  &trans          &trans
+                                                   &trans        &sl 1            &mkp LCLK           &mkp RCLK  &sl 0           &trans
             >;
         };
     };
