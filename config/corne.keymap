@@ -11,6 +11,21 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,10 +37,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp F     &kp P  &kp B             &kp J      &kp L  &kp U          &kp Y    &kp SEMICOLON  &kp BACKSPACE
-&kp LCTRL     &kp A  &kp R  &kp S     &kp T  &kp G             &kp K      &kp N  &kp E          &kp I    &kp O          &kp ESCAPE
-&kp LEFT_ALT  &kp X  &kp C  &kp D     &kp V  &kp Z             &kp M      &kp H  &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_CONTROL
-                            &kp LGUI  &sl 1  &kp LEFT_SHIFT    &kp SPACE  &sl 2  &kp BACKSPACE
+&kp TAB       &kp Q  &kp W  &kp F       &kp P                &kp B             &kp J      &kp L                 &kp U          &kp Y    &kp SEMICOLON  &kp BACKSPACE
+&kp LCTRL     &kp A  &kp R  &kp S       &hrm LEFT_COMMAND T  &kp G             &kp K      &hrm RIGHT_COMMAND N  &kp E          &kp I    &kp O          &kp ESCAPE
+&kp LEFT_ALT  &kp X  &kp C  &kp D       &kp V                &kp Z             &kp M      &kp H                 &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_CONTROL
+                            &kp DELETE  &sl 1                &kp LEFT_SHIFT    &kp SPACE  &sl 2                 &kp BACKSPACE
             >;
         };
 
