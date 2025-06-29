@@ -34,7 +34,7 @@
         ltc: ltc {
             compatible = "zmk,behavior-hold-tap";
             label = "layer tap custom";
-            bindings = <&to>, <&kp>;
+            bindings = <&sl>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -77,10 +77,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp LEFT_BRACE  &kp AMPERSAND  &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans  &trans  &trans  &trans  &trans  &trans
-&none  &kp COLON       &kp DOLLAR     &kp PERCENT           &kp CARET              &kp EQUAL          &trans  &trans  &trans  &trans  &trans  &trans
-&none  &kp TILDE       &kp EXCL       &kp AT_SIGN           &kp HASH               &kp PLUS           &trans  &trans  &trans  &trans  &trans  &trans
-                                      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &trans  &trans  &trans
+&trans  &kp HASH   &kp AT_SIGN       &kp EXCL              &kp AMPERSAND   &kp MINUS            &kp PLUS  &kp ASTERISK      &kp QUESTION           &kp DOLLAR         &trans     &trans
+&trans  &kp EQUAL  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp DOUBLE_QUOTES    &kp SQT   &kp RIGHT_BRACE   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GRAVE  &trans
+&trans  &trans     &trans            &trans                &kp LESS_THAN   &trans               &trans    &kp GREATER_THAN  &trans                 &trans             &trans     &trans
+                                     &trans                &trans          &kp UNDER            &trans    &trans            &trans
             >;
         };
 
@@ -98,7 +98,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-                        &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &trans
+                        &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &kp PERIOD
             >;
         };
 
