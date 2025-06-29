@@ -24,7 +24,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <180>;
             flavor = "balanced";
@@ -46,7 +46,7 @@
         compatible = "zmk,combos";
 
         mouse {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <37 40>;
         };
     };
@@ -77,10 +77,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp HASH   &kp AT_SIGN       &kp EXCL              &kp AMPERSAND   &kp MINUS            &kp PLUS  &kp ASTERISK      &kp QUESTION           &kp DOLLAR         &trans     &trans
-&trans  &kp EQUAL  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp DOUBLE_QUOTES    &kp SQT   &kp RIGHT_BRACE   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp GRAVE  &trans
-&trans  &trans     &trans            &trans                &kp LESS_THAN   &trans               &trans    &kp GREATER_THAN  &trans                 &trans             &trans     &trans
-                                     &trans                &trans          &kp UNDER            &trans    &trans            &trans
+&trans  &kp HASH   &kp PERCENT  &kp ASTERISK   &kp LEFT_BRACE        &kp QUESTION       &trans     &kp RIGHT_BRACE        &kp CARET  &kp DOLLAR  &trans  &trans
+&trans  &kp EQUAL  &kp AT       &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp SEMICOLON      &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS   &kp MINUS   &trans  &trans
+&trans  &trans     &kp HASH     &kp PERIOD     &kp LEFT_BRACKET      &kp EXCLAMATION    &trans     &kp RIGHT_BRACKET      &trans     &trans      &trans  &trans
+                                &trans         &trans                &kp UNDER          &trans     &trans                 &trans
             >;
         };
 
@@ -108,21 +108,6 @@
 &trans  &trans  &kp F4  &kp F5   &kp F6   &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp F1  &kp F2   &kp F3   &trans     &trans  &trans  &trans  &trans  &trans  &trans
                         &kp F10  &kp F11  &kp F12    &trans  &trans  &trans
-            >;
-        };
-
-        old-nav {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp F1  &kp F2           &kp F3           &kp F4           &kp F5           &kp F6             &kp F7  &kp F8            &kp F9              &kp F10           &kp F11                  &kp F12
-&none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &none   &kp LEFT_ARROW    &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW          &none
-&none   &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0    &none   &kp LG(LS(LEFT))  &kp LS(DOWN_ARROW)  &kp LS(UP_ARROW)  &kp LG(LS(RIGHT_ARROW))  &none
-                                          &trans           &sl 1            &trans             &trans  &sl 0             &trans
             >;
         };
 
