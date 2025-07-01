@@ -101,7 +101,7 @@
 
         mouse {
             bindings = <&to 5>;
-            key-positions = <37 40>;
+            key-positions = <38 39>;
         };
     };
 
@@ -140,19 +140,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp HASH   &kp PERCENT  &kp ASTERISK   &brace    &kp QUESTION       &trans     &trans     &trans     &trans    &trans      &trans
-&trans  &kp EQUAL  &kp AT       &kp AMPERSAND  &paren    &kp SEMICOLON      &kp COLON  &kp CARET  &kp MINUS  &kp PLUS  &kp DOLLAR  &trans
-&trans  &trans     &kp HASH     &than          &bracket  &kp EXCLAMATION    &trans     &trans     &trans     &trans    &trans      &trans
-                                &trans         &trans    &kp UNDER          &trans     &trans     &trans
+&trans  &kp QUESTION  &kp GRAVE  &kp ASTERISK   &brace    &kp AT           &trans  &than      &kp HASH  &kp SLASH  &kp EXCL    &trans
+&trans  &kp EQUAL     &kp SQT    &kp AMPERSAND  &paren    &kp SEMICOLON    &trans  &kp CARET  &kp PLUS  &kp MINUS  &kp DOLLAR  &trans
+&trans  &trans        &trans     &kp PERCENT    &bracket  &trans           &trans  &trans     &trans    &trans     &trans      &trans
+                                 &trans         &trans    &kp UNDER        &trans  &trans     &trans
             >;
         };
 
         num-pad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-                        &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &kp PERIOD
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+                        &trans  &trans  &trans    &kp MINUS  &kp KP_NUMBER_0  &kp PERIOD
             >;
         };
 
