@@ -156,10 +156,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp QUESTION  &kp GRAVE  &kp ASTERISK   &brace    &kp AT           &trans  &than      &kp HASH  &kp SLASH  &kp EXCL    &trans
-&trans  &kp EQUAL     &kp SQT    &kp AMPERSAND  &paren    &kp SEMICOLON    &trans  &kp CARET  &kp PLUS  &kp MINUS  &kp DOLLAR  &trans
-&trans  &trans        &trans     &kp PERCENT    &bracket  &trans           &trans  &trans     &trans    &trans     &trans      &trans
-                                 &trans         &trans    &kp UNDER        &trans  &trans     &trans
+&trans   &kp AT             &kp LESS_THAN  &kp GREATER_THAN  &kp AMPS      &kp PIPE        &kp BACKSLASH    &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR      &trans
+&kp SQT  &kp DOUBLE_QUOTES  &kp PLUS       &kp MINUS         &kp EQUAL     &kp QUESTION    &kp EXCLAMATION  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp HASH
+&trans   &trans             &trans         &kp PERCENT       &kp ASTERISK  &trans          &trans           &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH   &trans
+                                           &trans            &trans        &trans          &trans           &trans         &trans
             >;
         };
 
