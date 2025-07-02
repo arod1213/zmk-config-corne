@@ -94,6 +94,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        shift_caps: shift_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&caps_word>;
+        };
     };
 
     combos {
@@ -116,10 +123,28 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE   &kp Q                &kp W            &kp F                &kp P              &kp B    &kp J  &kp L               &kp U                 &kp Y             &kp SEMICOLON         &kp ESCAPE
-&kp TAB     &hrm LEFT_CONTROL A  &hrm LEFT_ALT R  &hrm LEFT_COMMAND S  &hrm LEFT_SHIFT T  &kp G    &kp K  &hrm RIGHT_SHIFT N  &hrm RIGHT_COMMAND E  &hrm RIGHT_ALT I  &hrm RIGHT_CONTROL O  &delete
-&caps_word  &kp X                &kp C            &kp D                &kp V              &kp Z    &kp M  &kp H               &kp COMMA             &kp DOT           &kp BACKSLASH         &kp SLASH
-                                                  &sl 3                &kp LEFT_SHIFT     &sl 2    &sl 1  &space_enter        &sl 4
+&kp GRAVE   &kp Q                &kp W            &kp F                &kp P              &kp B          &kp J         &kp L               &kp U                 &kp Y             &kp SEMICOLON         &kp ESCAPE
+&kp TAB     &hrm LEFT_CONTROL A  &hrm LEFT_ALT R  &hrm LEFT_COMMAND S  &hrm LEFT_SHIFT T  &kp G          &kp K         &hrm RIGHT_SHIFT N  &hrm RIGHT_COMMAND E  &hrm RIGHT_ALT I  &hrm RIGHT_CONTROL O  &delete
+&caps_word  &kp X                &kp C            &kp D                &kp V              &kp Z          &kp M         &kp H               &kp COMMA             &kp DOT           &kp BACKSLASH         &kp SLASH
+                                                  &sl 1                &sl 2              &shift_caps    &space_enter  &sl 3               &sl 4
+            >;
+        };
+
+        num-pad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_COMMAND  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_COMMAND  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_COMMAND  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
+                        &trans  &trans  &trans    &trans            &trans           &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans        &kp N7        &kp N8        &kp N9        &kp LEFT_COMMAND    &kp LG(X)   &kp LG(Z)  &kp LG(C)       &kp LG(V)     &kp LS(LG(Z))    &trans
+&trans  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_COMMAND    &kp CAPS    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_COMMAND    &kp INSERT  &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+                                    &trans        &trans        &trans              &trans      &trans     &trans
             >;
         };
 
@@ -135,24 +160,6 @@
 &trans  &kp EQUAL     &kp SQT    &kp AMPERSAND  &paren    &kp SEMICOLON    &trans  &kp CARET  &kp PLUS  &kp MINUS  &kp DOLLAR  &trans
 &trans  &trans        &trans     &kp PERCENT    &bracket  &trans           &trans  &trans     &trans    &trans     &trans      &trans
                                  &trans         &trans    &kp UNDER        &trans  &trans     &trans
-            >;
-        };
-
-        nav {
-            bindings = <
-&trans  &trans        &kp N7        &kp N8        &kp N9        &kp LEFT_COMMAND    &kp LG(X)   &kp LG(Z)  &kp LG(C)       &kp LG(V)     &kp LS(LG(Z))    &trans
-&trans  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_COMMAND    &kp CAPS    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_COMMAND    &kp INSERT  &kp HOME   &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
-                                    &trans        &trans        &trans              &trans      &trans     &trans
-            >;
-        };
-
-        num-pad {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_COMMAND  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_COMMAND  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_COMMAND  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
-                        &trans  &trans  &trans    &trans            &trans           &trans
             >;
         };
 
