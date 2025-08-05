@@ -41,42 +41,6 @@
             flavor = "balanced";
         };
 
-        paren: paren {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PAREN";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        brace: brace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BRACE";
-            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        bracket: bracket {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BRACKET";
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        than: than {
-            compatible = "zmk,behavior-mod-morph";
-            label = "THAN";
-            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         space_enter: space_enter {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_ENTER";
