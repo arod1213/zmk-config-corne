@@ -18,9 +18,9 @@
 
 / {
     behaviors {
-        hrm: hrm {
+        hrm_left: hrm_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM";
+            label = "HRM_LEFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -29,6 +29,7 @@
             require-prior-idle-ms = <180>;
             flavor = "balanced";
             hold-trigger-on-release;
+            hold-trigger-key-positions = <6 18 39 30 40 41 31 19 7 8 20 32 33 21 9 10 22 34 35 23 11>;
         };
 
         ltc: ltc {
@@ -65,6 +66,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&caps_word>;
         };
+
+        hrm_right: hrm_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <0 12 24 25 13 1 2 14 26 27 15 3 16 4 17 29 5 28 36 37 38>;
+            hold-trigger-on-release;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <185>;
+            require-prior-idle-ms = <180>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -87,10 +102,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE   &kp Q                &kp W            &kp F                &kp P              &kp B          &kp J         &kp L               &kp U                 &kp Y             &kp SEMICOLON         &kp ESCAPE
-&kp TAB     &hrm LEFT_CONTROL A  &hrm LEFT_ALT R  &hrm LEFT_COMMAND S  &hrm LEFT_SHIFT T  &kp G          &kp K         &hrm RIGHT_SHIFT N  &hrm RIGHT_COMMAND E  &hrm RIGHT_ALT I  &hrm RIGHT_CONTROL O  &delete
-&caps_word  &kp X                &kp C            &kp D                &kp V              &kp Z          &kp M         &kp H               &kp COMMA             &kp DOT           &kp BACKSLASH         &kp SLASH
-                                                  &sl 1                &sl 2              &shift_caps    &space_enter  &sl 3               &sl 4
+&kp GRAVE   &kp Q                     &kp W                 &kp F                     &kp P                   &kp B          &kp J         &kp L                     &kp U                       &kp Y                   &kp SEMICOLON               &kp ESCAPE
+&kp ESCAPE  &hrm_left LEFT_CONTROL A  &hrm_left LEFT_ALT R  &hrm_left LEFT_COMMAND S  &hrm_left LEFT_SHIFT T  &kp G          &kp K         &hrm_right RIGHT_SHIFT N  &hrm_right RIGHT_COMMAND E  &hrm_right RIGHT_ALT I  &hrm_right RIGHT_CONTROL O  &delete
+&caps_word  &kp X                     &kp C                 &kp D                     &kp V                   &kp Z          &kp M         &kp H                     &kp COMMA                   &kp DOT                 &kp BACKSLASH               &kp SLASH
+                                                            &sl 1                     &sl 2                   &shift_caps    &space_enter  &sl 3                     &sl 4
             >;
         };
 
@@ -120,10 +135,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp AT             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPS      &kp PIPE        &kp BACKSLASH    &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR      &trans
-&kp SQT    &kp DOUBLE_QUOTES  &kp PLUS          &kp MINUS          &kp EQUAL     &kp QUESTION    &kp EXCLAMATION  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp HASH
-&trans     &trans             &trans            &kp PERCENT        &kp ASTERISK  &trans          &trans           &kp SEMICOLON  &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH   &trans
-                                                &trans             &trans        &trans          &trans           &trans         &trans
+&kp GRAVE  &kp AT   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPS      &kp PIPE        &kp BACKSLASH    &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR      &trans
+&trans     &kp SQT  &kp PLUS          &kp MINUS          &kp EQUAL     &kp QUESTION    &kp EXCLAMATION  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp HASH
+&trans     &trans   &trans            &kp PERCENT        &kp ASTERISK  &none           &trans           &kp SEMICOLON  &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH   &trans
+                                      &trans             &trans        &trans          &trans           &trans         &trans
             >;
         };
 
