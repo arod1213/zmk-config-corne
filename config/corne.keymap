@@ -117,7 +117,7 @@
 &kp TAB     &kp Q                     &kp W                 &kp F                     &kp P                   &kp B          &kp J         &kp L                     &kp U                       &kp Y                   &kp SEMICOLON               &kp ESCAPE
 &kp ESCAPE  &hrm_left LEFT_CONTROL A  &hrm_left LEFT_ALT R  &hrm_left LEFT_COMMAND S  &hrm_left LEFT_SHIFT T  &kp G          &kp K         &hrm_right RIGHT_SHIFT N  &hrm_right RIGHT_COMMAND E  &hrm_right RIGHT_ALT I  &hrm_right RIGHT_CONTROL O  &delete
 &kp GRAVE   &kp X                     &kp C                 &kp D                     &kp V                   &kp Z          &kp M         &kp H                     &kp COMMA                   &kp DOT                 &kp BACKSLASH               &kp SLASH
-                                                            &kp LEFT_CONTROL          &sl 2                   &shift_caps    &space_enter  &sl 1                     &sl 3
+                                                            &sl 3                     &sl 2                   &shift_caps    &space_enter  &sl 1                     &kp LEFT_CONTROL
             >;
         };
 
@@ -129,10 +129,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp AT             &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPS      &kp PIPE        &kp BACKSLASH    &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR      &trans
-&trans     &kp SQT            &kp PLUS          &kp MINUS          &kp EQUAL     &kp QUESTION    &kp EXCLAMATION  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans
-&trans     &kp DOUBLE_QUOTES  &kp HASH          &kp PERCENT        &kp ASTERISK  &none           &none            &kp SEMICOLON  &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSLASH   &trans
-                                                &trans             &trans        &trans          &trans           &trans         &trans
+&kp GRAVE  &kp AT             &kp LESS_THAN  &kp GREATER_THAN  &kp AMPS      &kp PIPE        &kp SLASH        &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR      &trans
+&trans     &kp SQT            &kp PLUS       &kp MINUS         &kp EQUAL     &kp QUESTION    &kp EXCLAMATION  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans
+&trans     &kp DOUBLE_QUOTES  &kp HASH       &kp PERCENT       &kp ASTERISK  &none           &none            &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH   &trans
+                                             &trans            &trans        &trans          &trans           &trans         &trans
             >;
         };
 
